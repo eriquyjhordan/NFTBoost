@@ -107,7 +107,8 @@ export default {
       },
       backgroundImage: {
         'hero-pattern': 'url("../assets/bg-hero.svg")',
-        'hero-pattern-mobile': 'url("../assets/bg-hero-mobile.svg")',
+        banner: 'url("../assets/bg-banner.svg")',
+        'banner-mobile': 'url("../assets/bg-banner-mobile.svg")',
       },
     },
   },

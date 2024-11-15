@@ -1,3 +1,4 @@
+import BannerSection from '@/components/banner-section'
 import CarrouselCards from '@/components/carrousel-cards'
 import CollectorsSection from '@/components/collectors-selection'
 import Hero from '@/components/hero'
@@ -26,6 +27,7 @@ export default function Home() {
         subtitle="Seleção Mensal"
         title="Destaque do Mês"
       />
+      <BannerSection />
     </>
   )
 }
