@@ -32,9 +32,11 @@ export default function CarrouselCards({
 }: CarrouselCardsProps) {
   const navigationRef = useRef<any>()
   return (
-    <section className="container mt-16 lg:mt-28">
-      <TitleSection subTitle={subtitle} title={title} />
-      <div className="relative">
+    <section className="w-full max-w-grid mx-auto mt-16 lg:mt-28">
+      <div className="w-full max-w-grid px-5">
+        <TitleSection subTitle={subtitle} title={title} />
+      </div>
+      <div className="relative ml-5">
         <button
           className="hidden lg:flex absolute top-1/2 -left-6 -mt-6 z-10 bg-bluePrimary hover:bg-btn-secondary transition-colors border border-white/5 rounded-full w-12 h-12 items-center justify-center"
           onClick={() => navigationRef.current?.slidePrev()}

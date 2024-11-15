@@ -22,7 +22,7 @@ const FooterLink = ({
 
 export default function Footer() {
   return (
-    <footer className="container mt-16 lg:mt-28 flex flex-col gap-14 md:flex-row justify-between">
+    <footer className="container mt-16 lg:mt-28 mb-14 flex flex-col gap-14 md:flex-row justify-between">
       <div className="flex flex-col gap-4">
         <Link href="/">
           <Image src={nftLogo} alt="logo" width={160} height={35} />
