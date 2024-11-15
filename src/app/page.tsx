@@ -1,6 +1,7 @@
 import BannerSection from '@/components/banner-section'
 import CarrouselCards from '@/components/carrousel-cards'
 import CollectorsSection from '@/components/collectors-selection'
+import Faq from '@/components/faq'
 import Hero from '@/components/hero'
 import { featureCards, monthHighlights, trends } from '@/lib/cards-data'
 
@@ -28,6 +29,7 @@ export default function Home() {
         title="Destaque do Mês"
       />
       <BannerSection />
+      <Faq />
     </>
   )
 }
