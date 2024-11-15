@@ -1,15 +1,17 @@
-import CardNft from '@/components/card-nft'
-import CardOne from '@/assets/img-nft/01.webp'
+import CardCollectors from '@/components/card-collectors'
+import nft01 from '@/assets/img-nft/01.webp'
 
 export default function Home() {
   return (
     <section className="container">
-      <div className="p-8">
-        <CardNft
-          name="Borex #171"
-          thumbnail={CardOne}
-          valueBrl="602,02"
-          valueBtc="0.0721"
+      <div className="mt-10">
+        <CardCollectors
+          image={nft01}
+          minValueBtc="0.721"
+          name="Lorem Ipsum"
+          percent="+34"
+          position="2"
+          valueBtc="0.721"
         />
       </div>
     </section>
