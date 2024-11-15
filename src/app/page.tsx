@@ -1,4 +1,5 @@
 import CarrouselCards from '@/components/carrousel-cards'
+import CollectorsSection from '@/components/collectors-selection'
 import Hero from '@/components/hero'
 import { featureCards, monthHighlights, trends } from '@/lib/cards-data'
 
@@ -17,6 +18,8 @@ export default function Home() {
         subtitle="Seleção Mensal"
         title="Destaque do Mês"
       />
+      <div className="container w-full bg-white/5 h-[1.5px] mt-20 lg:mt-28" />
+      <CollectorsSection />
       <div className="container w-full bg-white/5 h-[1.5px] mt-20 lg:mt-28" />
       <CarrouselCards
         carrouselData={trends}
