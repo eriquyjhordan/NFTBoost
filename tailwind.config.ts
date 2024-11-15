@@ -25,6 +25,7 @@ export default {
         'text-muted': 'hsl(var(--text-muted))',
         foreground: 'hsl(var(--foreground))',
         black: 'hsl(var(--black))',
+        'btn-secondary': 'hsl(var(--btn-secondary))',
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
