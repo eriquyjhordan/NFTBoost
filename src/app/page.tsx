@@ -1,3 +1,9 @@
+import TitleSection from '@/components/title-section'
+
 export default function Home() {
-  return <h1>test</h1>
+  return (
+    <section className="container">
+      <TitleSection subTitle="Destaque em Coleções" title="Coleções notáveis" />
+    </section>
+  )
 }

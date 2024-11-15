@@ -14,6 +14,10 @@ export default {
         inter: ['var(--font-inter)'],
         poppins: ['var(--font-poppins)'],
       },
+      fontSize: {
+        leading: ['1.25rem', '150%'],
+        'mobile-title': ['2rem', '120%'],
+      },
       colors: {
         bluePrimary: 'hsl(var(--blue-primary))',
         greenPrimary: 'hsl(var(--green-primary))',
