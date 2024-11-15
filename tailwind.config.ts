@@ -108,11 +108,11 @@ export default {
       addComponents({
         '.container': {
           width: '100%',
-          maxWidth: '72rem',
+          maxWidth: '78.5rem',
           marginRight: 'auto',
           marginLeft: 'auto',
-          paddingLeft: '1rem',
-          paddingRight: '1rem',
+          paddingLeft: '1.25rem',
+          paddingRight: '1.25rem',
         },
       })
     },
