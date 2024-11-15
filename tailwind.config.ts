@@ -94,11 +94,19 @@ export default {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      width: {
+        'area-cards-mobile': '43.75rem',
+      },
+      height: {
+        'area-cards-mobile': '15.3rem',
+        'area-cards-desktop': '26.62rem',
+      },
       maxWidth: {
         grid: '77.25rem',
       },
       backgroundImage: {
         'hero-pattern': 'url("../assets/bg-hero.svg")',
+        'hero-pattern-mobile': 'url("../assets/bg-hero-mobile.svg")',
       },
     },
   },
