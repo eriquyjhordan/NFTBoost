@@ -22,7 +22,9 @@ export default {
         bluePrimary: 'hsl(var(--blue-primary))',
         greenPrimary: 'hsl(var(--green-primary))',
         background: 'hsl(var(--background))',
+        'text-muted': 'hsl(var(--text-muted))',
         foreground: 'hsl(var(--foreground))',
+        black: 'hsl(var(--black))',
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
