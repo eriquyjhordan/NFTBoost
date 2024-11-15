@@ -21,13 +21,13 @@ export default function CardNft({
 }: Props) {
   return (
     <div className="bg-black border-border border rounded-2xl max-w-fit">
-      <a className="relative" href="#">
+      <div className="relative">
         <Image src={thumbnail} alt="card nft" width={280} height={240} />
-        <div className="absolute top-2 right-2 flex gap-1 px-6 py-3 bg-black border-[2px] border-border rounded-full">
+        <button className="absolute top-2 right-2 flex gap-1 px-6 py-3 bg-black border-[2px] border-border rounded-full">
           <Image src={Heart} alt="heart icon" width={16} height={16} />
           <span className="text-xs text-text-muted font-semibold">0</span>
-        </div>
-      </a>
+        </button>
+      </div>
       <div className="p-4 space-y-4">
         <div className="space-y-1">
           <div className="flex gap-1">
