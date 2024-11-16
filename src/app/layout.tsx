@@ -1,8 +1,11 @@
+/* eslint-disable camelcase */
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
+
+export const experimental_ppr = true
 
 const inter = Inter({
   subsets: ['latin'],

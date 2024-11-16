@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
+/* eslint-disable @typescript-eslint/no-var-requires */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    ppr: 'incremental',
+  },
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
-export default nextConfig;
+module.exports = withBundleAnalyzer(nextConfig)
