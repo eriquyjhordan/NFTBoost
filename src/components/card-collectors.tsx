@@ -26,13 +26,11 @@ export default function CardCollectors({
         <div className="relative">
           <Image
             src={image}
-            width={40}
-            height={40}
             alt="nft small"
             className="border-2 border-white/5 rounded-full w-10 h-10 object-contain"
           />
           <div className="absolute -bottom-1 -right-1">
-            <Image src={verified} width={17} height={17} alt="verified icon" />
+            <Image src={verified} alt="verified icon" />
           </div>
         </div>
         <div className="ml-4">
@@ -40,7 +38,7 @@ export default function CardCollectors({
           <div className="md:flex gap-1">
             <p className="text-white/70 text-xs md:text-sm">Preço mínimo</p>
             <p className="flex gap-1 font-semibold text-xs md:text-sm">
-              <Image src={ethIcon} width={8} height={13} alt="eth icon" />
+              <Image src={ethIcon} alt="eth icon" />
               {valueBtc} BTC
             </p>
           </div>
@@ -51,8 +49,7 @@ export default function CardCollectors({
           +{percent}%
         </p>
         <p className="flex text-xs md:text-sm font-semibold gap-1">
-          <Image src={ethIcon} width={8} height={13} alt="eth icon" />{' '}
-          {valueBtc} BTC
+          <Image src={ethIcon} alt="eth icon" /> {valueBtc} BTC
         </p>
       </div>
     </div>

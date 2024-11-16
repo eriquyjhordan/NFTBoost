@@ -16,20 +16,10 @@ export default function BannerSection() {
           </p>
           <div className="flex flex-col items-center justify-center gap-4 lg:flex-row">
             <a href="#">
-              <Image
-                src={GooglePlay}
-                alt="link to Google play store"
-                width={216}
-                height={64}
-              />
+              <Image src={GooglePlay} alt="link to Google play store" />
             </a>
             <a href="#">
-              <Image
-                src={AppleStore}
-                alt="link to Google play store"
-                width={192}
-                height={64}
-              />
+              <Image src={AppleStore} alt="link to Google play store" />
             </a>
           </div>
         </div>

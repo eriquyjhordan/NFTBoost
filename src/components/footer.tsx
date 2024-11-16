@@ -25,7 +25,7 @@ export default function Footer() {
     <footer className="container mt-16 lg:mt-28 mb-14 flex flex-col gap-14 md:flex-row justify-between">
       <div className="flex flex-col gap-4">
         <Link href="/">
-          <Image src={nftLogo} alt="logo" width={160} height={35} />
+          <Image src={nftLogo} alt="logo" />
         </Link>
         <p className="max-w-80 mb-2 text-lg text-white/70">
           Lorem Ipsum is simply dummy text of the printing and typesetting
