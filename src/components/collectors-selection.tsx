@@ -1,5 +1,11 @@
+'use client'
+
 import CardCollectors, { type CardCollectorsProps } from './card-collectors'
 import TitleSection from './title-section'
+import { useRef } from 'react'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import Nft04 from '@/assets/img-nft/04.webp'
 import Nft05 from '@/assets/img-nft/05.webp'
@@ -9,6 +15,8 @@ import Nft08 from '@/assets/img-nft/08.webp'
 import Nft09 from '@/assets/img-nft/09.webp'
 import Nft10 from '@/assets/img-nft/10.webp'
 import Nft11 from '@/assets/img-nft/11.webp'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function CollectorsSection() {
   const cardCollectorsData: CardCollectorsProps[] = [
@@ -70,13 +78,35 @@ export default function CollectorsSection() {
     },
   ]
 
+  const collectorsAreaRef = useRef(null)
+
+  useGSAP(() => {
+    gsap.fromTo(
+      collectorsAreaRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: collectorsAreaRef.current,
+          start: 'top-=400 center',
+        },
+      },
+    )
+  })
+
   return (
     <section className="container mt-16 lg:mt-28">
       <TitleSection
         subTitle="Colecionadores em Foco"
         title="Principais colecionadores"
       />
-      <div className="grid lg:grid-cols-2 gap-x-8 gap-y-4">
+      <div
+        className="grid lg:grid-cols-2 gap-x-8 gap-y-4"
+        ref={collectorsAreaRef}
+      >
         {cardCollectorsData.map(
           ({ image, name, percent, position, valueBtc }) => (
             <CardCollectors

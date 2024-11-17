@@ -10,6 +10,11 @@ import CardNft from './card-nft'
 import TitleSection from './title-section'
 import Image, { StaticImageData } from 'next/image'
 import { useRef } from 'react'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export type CardProps = {
   id: string
@@ -31,12 +36,31 @@ export default function CarrouselCards({
   title,
 }: CarrouselCardsProps) {
   const navigationRef = useRef<any>()
+  const carrouselAreaRef = useRef(null)
+
+  useGSAP(() => {
+    gsap.fromTo(
+      carrouselAreaRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: carrouselAreaRef.current,
+          start: 'top-=400 center',
+        },
+      },
+    )
+  })
+
   return (
     <section className="w-full max-w-grid mx-auto mt-16 lg:mt-28">
       <div className="w-full max-w-grid px-5">
         <TitleSection subTitle={subtitle} title={title} />
       </div>
-      <div className="relative ml-5">
+      <div className="relative ml-5" ref={carrouselAreaRef}>
         <button
           className="hidden lg:flex absolute top-1/2 -left-6 -mt-6 z-10 bg-bluePrimary hover:bg-btn-secondary transition-colors border border-white/5 rounded-full w-12 h-12 items-center justify-center"
           onClick={() => navigationRef.current?.slidePrev()}
