@@ -25,7 +25,6 @@ export default function BannerSection() {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: bannerRef.current,
-          markers: true,
           start: 'top-=100% center',
         },
       },
