@@ -2,7 +2,7 @@
 'use client'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper/modules'
+import { Navigation, Mousewheel } from 'swiper/modules'
 import Arrow from '@/assets/arrow.svg'
 
 import 'swiper/css'
@@ -68,7 +68,8 @@ export default function CarrouselCards({
           <Image src={Arrow} alt="navigation arrow for carrousel" />
         </button>
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Mousewheel]}
+          mousewheel={{ forceToAxis: true }}
           spaceBetween={32}
           slidesPerView={4}
           scrollbar={{ draggable: true }}
